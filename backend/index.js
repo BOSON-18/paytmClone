@@ -4,7 +4,7 @@ const app = express()
 const rootRouter = require("./Routes/index");
 const port = 3000
 
-//middlewares
+//* middlewares
 
 app.use("api/v1", rootRouter);
 
