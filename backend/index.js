@@ -1,7 +1,12 @@
 const express = require('express')
 const { default: mongoose } = require('mongoose')
 const app = express()
+const rootRouter = require("./Routes/index");
 const port = 3000
+
+//middlewares
+
+app.use("api/v1", rootRouter);
 
 //* mongo connection 
 async function main() {
