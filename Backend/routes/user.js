@@ -15,7 +15,7 @@ const signupSchema = zod.object({
     lastName: zod.string(),
 })
 
-router.post("signup", async (req, res) => {
+router.post("/signup", async (req, res) => {
 
     //? validating user input with zod
     const { success } = signupSchema.safeParse(req.body);
